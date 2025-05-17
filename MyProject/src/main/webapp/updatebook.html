@@ -1,0 +1,72 @@
+<html>
+<head>
+      <title>Update Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      
+        function validateForm() {
+            var oldAuthor = document.getElementById("oldAuthor").value;
+            var oldTitle = document.getElementById("oldTitle").value;
+            var oldCategory = document.getElementById("oldCategory").value;
+            var oldUser = document.getElementById("oldUser").value;
+            var newAuthor = document.getElementById("newAuthor").value;
+            var newTitle = document.getElementById("newTitle").value;
+            var newCategory = document.getElementById("newCategory").value;
+            var newUser = document.getElementById("newUser").value;
+
+           
+            if (oldAuthor == "" || oldTitle == "" || oldCategory == "" || oldUser == "" ||
+                newAuthor == "" || newTitle == "" || newCategory == "" || newUser == "") {
+                alert("All fields must be filled out.");
+                return false; 
+            }
+            return true; 
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Update Book</h1>
+        <form action="updateBookServlet" method="POST" onsubmit="return validateForm()">
+            <h3>Old Book Information</h3>
+            <label for="oldAuthor">Old Author:</label>
+            <input type="text" id="oldAuthor" name="oldAuthor" required /><br><br>
+
+            <label for="oldTitle">Old Title:</label>
+            <input type="text" id="oldTitle" name="oldTitle" required /><br><br>
+
+            <label for="oldCategory">Old Category:</label>
+            <input type="text" id="oldCategory" name="oldCategory" required /><br><br>
+
+            <label for="oldUser">Old User:</label>
+            <input type="text" id="oldUser" name="oldUser" required /><br><br>
+
+
+            <h3>New Book Information</h3>
+            <label for="newAuthor">New Author:</label>
+            <input type="text" id="newAuthor" name="newAuthor" required /><br><br>
+
+            <label for="newTitle">New Title:</label>
+            <input type="text" id="newTitle" name="newTitle" required /><br><br>
+
+            <label for="newCategory">New Category:</label>
+            <input type="text" id="newCategory" name="newCategory" required /><br><br>
+
+            <label for="newUser">New User:</label>
+            <input type="text" id="newUser" name="newUser" required /><br><br>
+
+            <input type="submit" value="Update Book">
+        </form>
+
+
+        <div id="responseMessage">
+            <h2>
+                click to back to admin panel
+            </h2>
+            <a href="adminpanel.html">
+                <button>Back to Admin Panel</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

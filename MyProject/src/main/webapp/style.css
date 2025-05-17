@@ -1,0 +1,146 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: 100vh;        
+    flex-direction: column;  
+    color: #4a4a4a; 
+    text-align: center;      
+}
+
+
+.dashboard-container {
+    width: 100%;               
+    max-width: 1200px;      
+    margin: 0 auto;          
+    padding: 20px;             
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
+    justify-content: center;   
+    min-height: 100vh;         
+}
+
+
+table {
+    margin: auto;              
+    margin-top: 30px;
+    border-spacing: 10px;
+    margin-bottom: 20px;
+    text-align: center;        
+}
+
+table td {
+    text-align: center;
+    padding: 12px;
+}
+
+
+table td form input[type="submit"] {
+    width: 180px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #2ECC71;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+table td form input[type="submit"]:hover {
+    background-color: #27AE60;
+    transform: scale(1.05);
+}
+
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin-top: 20px;
+    border: 1px solid #BDC3C7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+form input,
+form select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #BDC3C7;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #3498DB;
+    outline: none;
+}
+
+
+input[type="submit"],
+input[type="button"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498DB;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #2980B9;
+    transform: scale(1.05);
+}
+
+
+.error-message {
+    color: #E74C3C;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+body {
+    background-color: #ecf0f1;
+}
+
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    input[type="submit"],
+    input[type="button"] {
+        font-size: 16px;
+    }
+}

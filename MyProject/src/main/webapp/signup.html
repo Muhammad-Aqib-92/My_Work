@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>SignUp</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript">
+        
+        function checkemail() {
+            var email = document.signup.email.value;
+            var atrate = email.indexOf('@');
+            var dot = email.indexOf('.');
+
+            if (atrate <= 0 || dot <= atrate + 1 || dot >= email.length - 1 || dot <= 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        
+        function validateform() {
+            var user = document.signup.username.value;
+            var email = document.signup.email.value;
+            var pw = document.signup.pw.value;
+            var cpw = document.signup.cpw.value;
+
+            if (user == "") {
+                alert("Username is empty. Please fill the username.");
+                document.signup.username.focus();
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email is empty. Please fill the email.");
+                document.signup.email.focus();
+                return false;
+            }
+
+            if (pw == "") {
+                alert("Password is empty. Please fill the password.");
+                document.signup.pw.focus();
+                return false;
+            }
+
+            if (pw != cpw) {
+                alert("Password and confirm password are not the same.");
+                document.signup.pw.focus();
+                return false;
+            }
+
+            if (checkemail() != true) {
+                alert("Email is invalid.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+    <script>
+       
+        function go() {
+            window.location.href = "signin.html";
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>SignUp Form</h1>
+
+   
+    <form action="SignupServlet" name="signup" onsubmit="return validateform()" method="post">
+        <table>
+            
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username" required></td>
+            </tr>
+
+            
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" placeholder="abc@gmail.com" required></td>
+            </tr>
+
+         
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pw" required></td>
+            </tr>
+
+            
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="cpw" required></td>
+            </tr>
+
+            
+            <tr>
+                <td><input type="hidden" name="role" value="user"></td>
+            </tr>
+
+            
+            <tr>
+                <td><input type="submit" name="submit" value="SignUp"></td>
+                <td><input type="button" onclick="go()" value="Signin"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

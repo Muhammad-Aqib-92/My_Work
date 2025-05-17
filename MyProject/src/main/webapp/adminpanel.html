@@ -1,0 +1,87 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+       <title>Admin Dashboard</title>
+       
+       
+</head>
+
+<body>
+    <h1>Welcome Dear Admin</h1>
+
+    <h3>Admin Dashboard</h3>
+
+    <table>
+        <tr>
+            <td>
+                <form action="add" method="get">
+                    <input type="submit" name="aob" value="Add Book">
+                </form>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <form action="DeleteBookServlet" method="get">
+                    <input type="submit" name="db" value="Delete Book">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="AddUserServlet" method="get">
+                    <input type="submit" name="au" value="Add User">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="DeleteUserServlet" method="get">
+                    <input type="submit" name="du" value="Delete User">
+                </form>
+            </td>
+        </tr>
+        
+          <tr>
+            <td>
+                <form action="updatebook.html">
+                    <input type="submit" name="du" value="UpdateBook">
+                </form>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <form action="ShowAllUsersServlet" method = "post">
+                    <input type="submit" name="du" value="View All Users">
+                </form>
+            </td>
+        </tr>
+                   
+        
+        
+        <tr>
+            <td>
+                <form action="ViewBooksServlet" method="get">
+                    <input type="submit" name="vb" value="View Book">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="SearchBookServlet" method="get">
+                    <input type="submit" name="sb" value="Search Book">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="AdminLogOutServlet" method="get">
+                    <input type="submit" name="lo" value="Logout">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

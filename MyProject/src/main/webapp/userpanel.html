@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+       <title>User Dashboard</title>
+</head>
+
+<body>
+    <h1>Welcome</h1> 
+    <h3>User Dashboard</h3>
+
+    <table>
+        <tr>
+            <td>
+                <form action="ViewBooksServlet" method="get">
+                    <input type="submit" name="vb" value="View All Books">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="DeleteBookServlet" method="get">
+                    <input type="submit" name="dob" value="Delete Your Old Books">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="add" method="get">
+                    <input type="submit" name="aob" value="Add Old Books">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="SearchBookServlet" method="get">
+                    <input type="submit" name="sb" value="Search Books">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="AdminLogOutServlet" method="get">
+                    <input type="submit" name="lo" value="Log Out">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

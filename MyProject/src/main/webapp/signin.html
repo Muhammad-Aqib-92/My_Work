@@ -1,0 +1,92 @@
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>
+        Login
+    </title>
+
+    <script>
+        function validate()
+        {
+           var  role = document.authenticate.role.value;
+         if(role!= "")
+         {
+            return true;
+         }
+         else
+         {
+            alert("Please select a role.");
+            document.authenticate.role.focus();
+
+            return false;
+         }
+        }
+    </script>
+
+    <script>
+    
+        function move()
+        {
+            window.location.href = "signup.html";
+          
+        }
+    </script>
+
+
+</head>
+
+
+<body>
+    <h1>
+        LOGIN 
+    </h1>
+
+    <form action="authenticate" method="post" name="authenticate" onsubmit="return validate()">
+    <table>
+
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input type="email" name="email" required>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pw" required></td>
+
+        </tr>
+        
+        <tr>
+            <td>
+                <select name="role" >
+                    <option value="">-Role-</option>
+                    <option value="admin">-admin-</option>
+                    <option value="user">-user-</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="Signin">
+            </td>
+            <td><input type="button" onclick="move()" value="Signup"></td>
+        </tr>
+        
+    </table>
+
+</form>
+    
+
+</body>
+
+
+</html>
